@@ -9,8 +9,8 @@ module.exports.adder = function(a, b) {
 module.exports.pi = 3.14
 
 
-module.exports = {
-    counter = counter,
-    pi = this.pi,
-    adder = this.adder
-};
+// module.exports = {
+//     counter = counter,
+//     pi = this.pi,
+//     adder = this.adder
+// };
