@@ -14,5 +14,3 @@ fs.rmdirSync('stuff'); //no callback needed
 //fs.rmdir('stuff' function() {
     //this requires a callback
 //})
-
-//fs.rmdir('stuff')

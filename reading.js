@@ -4,16 +4,16 @@ var fs = require('fs') //variable name = module name is a common convention;
 //blocking the flow of the code 
 //syncornous method
 //console.log(readMe);
-let data = 'this is updated text that i am writing';
-fs.readFile('read.txt', 'utf8', function(err, data) { //this one is asyncronous;
-    fs.writeFile('writeMe.txt', data, (err) => {
-        if (err) {
-            console.log(err);
-        } else {
-            console.log(fs.readFileSync('writeMe.txt', 'utf-8'));
-        }
-    }) //we're not blocking the code up here, all async
-});
+// let data = 'this is updated text that i am writing';
+// fs.readFile('read.txt', 'utf8', function(err, data) { //this one is asyncronous;
+//     fs.writeFile('writeMe.txt', data, (err) => {
+//         if (err) {
+//             console.log(err);
+//         } else {
+//             console.log(fs.readFileSync('writeMe.txt', 'utf-8'));
+//         }
+//     }) //we're not blocking the code up here, all async
+// });
 
 //var.readFile() = async; much quicker
 //var.readFileSync = sync.
@@ -27,4 +27,10 @@ fs.readFile('read.txt', 'utf8', function(err, data) { //this one is asyncronous;
 //       console.log(fs.readFileSync("books.txt", "utf8")); 
 //     } 
 //   }); 
+
+let readMe = fs.readFileSync('test.txt', 'utf-8');
+console.log(readMe)
+
+console.log(String.fromCharCode(226));
+
 
