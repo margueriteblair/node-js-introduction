@@ -7,9 +7,17 @@ let server = http.createServer(function(req, response) {
     //response header 
     //content-type & status
     console.log('request was made: ' + req.url)
-    response.writeHead(200, ('Content-Type', 'text/plain'));
-    var myReadStream = fs.createReadStream(__dirname + '/caesar.txt', 'utf8');
-    myReadStream.pipe(response); //message to send when the response is done
+    response.writeHead(200, ('Content-Type', 'application/json'));
+    // var myReadStream = fs.createReadStream(__dirname + '/index.html', 'utf8');
+    // myReadStream.pipe(response); //message to send when the response is done
+
+    
+    let myObj = {
+        name: 'Margie',
+        job: 'Coder',
+        age: 21
+    }
+    response.end(JSON.stringify(myObj));
 });
 
 server.listen(3000, '127.0.0.1');
