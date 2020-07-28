@@ -11,14 +11,14 @@ app.get('/', (req, res) => {
     //console.log(req);
     res.sendFile(__dirname + '/index.html');
 })
-app.get('/contact', urlencodedParser, (req, res) => {
+app.get('/contact', (req, res) => {
     console.log(req.body);
     //res.send('This is the page for Margies contact information')
     res.sendFile(__dirname + '/contact.html');
 })
-app.post('/contact', (req, res) => {
+app.post('/contact',urlencodedParser, (req, res) => {
     //res.send('This is the page for Margies contact information')
-    res.sendFile(__dirname + '/contact.html');
+    res.render('contact-success', {data: req.body});
 })
 
 app.get('/profile/:id', (req, res) => {
