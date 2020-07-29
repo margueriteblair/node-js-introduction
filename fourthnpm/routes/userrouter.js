@@ -2,7 +2,8 @@ const express = require('express');
 
 router = express.Router();
 router.get('/:id', (req, res) => {
-    res.send(`The user is requesting to see ${req.params.id}. The user will also have access to ${req.params.id}`);
+    let data = {age: 21, job: 'careerdevs student'}
+    res.render('profile', {person: req.params.id, data: data} )
 })
 
 

@@ -3,9 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Margie's NPM App - Home</title>
+    <style>
+        body {
+            color: lightpink
+        }
+        h1 {
+            font-size: 60px;
+            font-family: monospace;
+            text-align: center;
+        }
+        h3 {
+            font-size: 48px;
+            font-family: monospace;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    
+    <h1>Welcome to the profile of <%= person %></h1>
+    <h3><strong>Age: </strong><%= data.age %></h3>
+    <h3><strong>Job: </strong><%= data.job %></h3>
+
 </body>
 </html>
