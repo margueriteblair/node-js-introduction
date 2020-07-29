@@ -1,4 +1,8 @@
 //console.log('Hello World, this is an npm test');
+document.getElementById('submit-button').addEventListener('click', () => {
+    document.getElementsByClassName("input").value = "";
+})
+
 let fs = require('fs');
 let express = require('express');
 let mongoose = require('mongoose');
@@ -14,7 +18,7 @@ app.get('/', (req, res) => {
 app.get('/contact', (req, res) => {
     console.log(req.body);
     //res.send('This is the page for Margies contact information')
-    res.sendFile(__dirname + '/contact.html');
+    res.render('contact', {qs: req.query});
 })
 app.post('/contact',urlencodedParser, (req, res) => {
     //res.send('This is the page for Margies contact information')

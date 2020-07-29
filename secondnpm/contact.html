@@ -33,13 +33,13 @@
     <h3>Please leave a message below.</h3>
     <form id='contact-form' method="POST" action="/contact">
         <label for='who'>Your Name</label>
-        <input type="text" placeholder="Your name" value="<%=qs.person %>">
+        <input class="input" type="text" placeholder="Your name" >
         <label for='email' name='email' value="<%=qs.email %>"></label>
-        <input type='email' id ='email' placeholder="Your email">
+        <input class="input" type='email' id ='email' placeholder="Your email">
         <br>
         <label for='email' name='email' value="<%=qs.email %>"</label>
-        <input id='message-box' type="text" placeholder="Your message here"><br>
-        <input type='submit' value=submit>
+        <input class="input" id='message-box' type="text" placeholder="Your message here"><br>
+        <input id='submit-button' type='submit' value=submit>
     </form>
 </body>
 </html>
