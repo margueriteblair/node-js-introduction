@@ -1,7 +1,7 @@
 //console.log('Hello World, this is an npm test');
-document.getElementById('submit-button').addEventListener('click', () => {
-    document.getElementsByClassName("input").value = "";
-})
+// document.getElementById('submit-button').addEventListener('click', () => {
+//     document.getElementsByClassName("input").value = "";
+
 
 let fs = require('fs');
 let express = require('express');
@@ -26,7 +26,7 @@ app.post('/contact',urlencodedParser, (req, res) => {
 })
 
 app.get('/profile/:id', (req, res) => {
-    res.send(`You requested to see a profile with the id of ${req.params.id}`)
+    res.send(`You requested to see a profile with the id of ${req.params}`)
 }) //dynamic routes
 
 
