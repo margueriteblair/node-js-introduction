@@ -2,8 +2,8 @@ const express = require('express');
 
 
 router = express.Router();
-router.get('/:params', (req, res) => {
-    res.send(req.queries);
+router.get('/profile/:id', (req, res) => {
+    res.send(`The user is requesting to see ${req.params.id}. The user will also have access to ${req.params.id}`);
 })
 
 
