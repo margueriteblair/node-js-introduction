@@ -10,7 +10,7 @@ const port = 3000;
 
 app.use(firstMid)
 app.use('/', router)
-app.use('/user')
+app.use('/user', userrouter);
 
 
 app.listen(port, function() {
