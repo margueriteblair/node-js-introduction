@@ -13,29 +13,16 @@
             font-family: monospace;
             text-align: center;
         }
-        h3, li {
+        h3 {
             font-size: 48px;
             font-family: monospace;
             text-align: center;
-        }
-        li {
-            list-style: none;
-            text-decoration: none;
-            font-size: 30px;
         }
     </style>
 </head>
 <body>
     <% include partials/nav.ejs %>
-    <h1>Welcome to the profile of <%= person %></h1>
-    <h3><strong>Age: </strong><%= data.age %></h3>
-    <h3><strong>Job: </strong><%= data.job %></h3>
-    <h3>Hobbies:</h3>
-    <ul>
-        <% data.hobbies.forEach(function(item) { %>
-            <li><%= item %></li>
-       <% }) %> 
-    </ul>
-
+    <h1>Welcome to the webpage!</h1>
+    <h3>Work in progress... Will be updating soon!</h3>
 </body>
 </html>
