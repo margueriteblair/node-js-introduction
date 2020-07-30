@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
 
 app.get('/contact', (req, res) => {
     console.log(req.query); //this is how we get the queries in express;
-    res.render('contact') //this one is the ejs file
+    res.render('contact', {qs: req.query}) //this one is the ejs file
 })
 
 app.get('/profile/:name', (req, res) => {
