@@ -6,6 +6,7 @@ const express = require('express');
 const router = express.Router();
 
 router.post('/newUser', (req, res) => {
+    console.log(req.body);
     res.send('SAAAAAAHH') //no params !! >:()
     //req.query is built on the frontend, as is the body
 })
