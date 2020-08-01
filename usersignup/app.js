@@ -9,8 +9,8 @@ let app = express();
 let port = 3000;
 //app usage permissions
 app.use('/', homeRouter);
-//app.use('/user', userpost);
-// app.use('/user/post/new', newuserpost);
+app.use('/user', userpost);
+app.use('/post/new', newuserpost);
 
 
 
