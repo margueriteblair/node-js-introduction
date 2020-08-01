@@ -1,12 +1,14 @@
 //imported packages
 const express = require('express');
+//imported files
+let homeRouter = require('./routes/home');
 
 let app = express();
 let port = 3000;
+//app usage permissions
+app.use('/', homeRouter);
 
-app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/index.html')
-})
+
 
 
 app.listen(port, () => {
