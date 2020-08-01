@@ -2,7 +2,7 @@ let express = require('express');
 
 let router = express.Router();
 
-router.post('/post/new', (req, res) => {
-    console.log(req.body)
-    res.send()
+router.post('/post', (req, res) => {
+    // console.log(req.body)
+    res.sendFile(__dirname + "/usernew.html")
 })
