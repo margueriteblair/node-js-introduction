@@ -10,7 +10,8 @@ let port = 3000;
 //app usage permissions
 app.use('/', homeRouter);
 app.use('/user', userpost);
-
+app.use(express.json()) //middleware that allows us to parse stringified objects
+//as a best practice don't trust what the client sends you
 
 
 app.listen(port, () => {
