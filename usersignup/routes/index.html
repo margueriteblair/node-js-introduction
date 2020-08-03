@@ -33,16 +33,37 @@
 <body>
     <h1>WELCOME TO THE HOMEPAGE</h1>
     <h3>Please fill out the form below:</h3>
-<form id='form' action="usernew.html" method='POST'>
-    <input type='text' name='usr' placeholder="Username" required><br>
+<form id='form'>
+    <input id='usr' type='text' name='usr' placeholder="Username" required><br>
 
-    <input type='email' name='email' placeholder="Email" required><br>
+    <input id='email' type='email' name='email' placeholder="Email" required><br>
 
-    <input type="password" name="pswd" placeholder="Password" required><br>
+    <input id='pswd1' type="password" name="pswd" placeholder="Password" required><br>
 
-    <input type="password" name='pswd' placeholder="Confirm Password" required><br>
-    <button type="submit" name="Submit">Submit Information</button>
+    <input id='pswd2' type="password" name='pswd' placeholder="Confirm Password" required><br>
+    <button id='submit' type="submit" name="Submit">Submit Information</button>
 </form>
+<script>
+    const user = document.getElementsByName('usr').value
+    const email = document.getElementsByName('email').value
+    const pswd = document.getElementsByName('pswd').value
+    // const data = req.body
+    const options = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    }
+
+    fetch('/post', options).then(res => {
+        console.log(res)
+    })
+
+    document.getElementById('submit').onclick = function() {
+        console.log(user, email, pswd);
+    }
+</script>
 </body>
 </html>
 <!-- get will append to url and post to save to server -->
