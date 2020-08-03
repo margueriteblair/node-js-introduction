@@ -4,7 +4,7 @@ let router = express.Router();
 const usernew = require('./usernew');
 
 router.get('/post', (req, res) => {
-    console.log(JSON.parse(req.body))
+    console.log((req.body))
     res.send('Success');
 }) 
 //posting is for creating or updating a resource
