@@ -1,10 +1,3 @@
-//packages import
-//const express = require('express');
-
-//router = new express.Router();
-
-//alt
-
 const { Router } = require('express');
 /*
 @path / localhost:port/user/now/:day/:month?parm1={Boolean}
