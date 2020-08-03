@@ -31,7 +31,7 @@
     </style>
 </head>
 <body>
-    <h1>WELCOME TO THE HOMEPAGE</h1>
+    <!-- <h1>WELCOME TO THE HOMEPAGE</h1>
     <h3>Please fill out the form below:</h3>
 <form id='form' action="/user/post" method='GET'>
     <input id='usr' type='text' name='usr' placeholder="Username" required><br>
@@ -40,29 +40,8 @@
     <input id='pswd2' type="password" name='pswd2' placeholder="Confirm Password" required><br>
     <button id='submit' type="submit" name="Submit">Submit Information</button>
     <div id='error'></div>
-</form>
-<script>
-    if (document.getElementById('pswd1').value !== document.getElementById('pswd2').value) {
-        document.getElementById('submit').disabled = true;
-        document.getElementById('error').innerText = 'Error: Passwords must match before submit.'
-    }
-    // const user = document.getElementsByName('usr').value
-    // const email = document.getElementsByName('email').value
-    // const pswd = document.getElementsByName('pswd1').value
-    // const data = req.body
-    // const options = {
-    //     method: 'POST',
-    //     headers: {
-    //         'Content-Type': 'application/json'
-    //     },
-    //     body: JSON.stringify(data)
-    // }
-
-    // fetch('/post', options).then(res => {
-    //     console.log(res)
-    // })
-
-</script>
+</form> -->
+<script src='./home.js'></script>
 </body>
 </html>
 <!-- get will append to url and post to save to server -->

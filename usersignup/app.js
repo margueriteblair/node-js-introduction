@@ -10,6 +10,7 @@ let port = 3000;
 
 //app usage permissions
 app.use(express.json())
+app.use(express.static('public'))
 app.use('/', homeRouter);
 app.use('/user', userpost);
 //middleware that allows us to parse stringified objects
