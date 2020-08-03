@@ -33,7 +33,7 @@
 <body>
     <h1>WELCOME TO THE HOMEPAGE</h1>
     <h3>Please fill out the form below:</h3>
-<form id='form' action="usernew.html" method='POST'>
+<form id='form' action="/usernew" method='POST'>
     <input id='usr' type='text' name='usr' placeholder="Username" required><br>
     <input id='email' type='email' name='email' placeholder="Email" required><br>
     <input id='pswd1' type="password" name="pswd" placeholder="Password" required><br>
@@ -42,7 +42,7 @@
     <div id='error'></div>
 </form>
 <script>
-    if (document.getElementById('pswd1').value != document.getElementById('pswd2').value) {
+    if (document.getElementById('pswd1').value !== document.getElementById('pswd2').value) {
         document.getElementById('error').textContent = 'Error: Passwords must match before submit.'
     }
     const user = document.getElementsByName('usr').value
