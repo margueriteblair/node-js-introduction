@@ -33,11 +33,11 @@
 <body>
     <h1>WELCOME TO THE HOMEPAGE</h1>
     <h3>Please fill out the form below:</h3>
-<form id='form' action="/user/post" method='POST'>
+<form id='form' action="/user/post" method='GET'>
     <input id='usr' type='text' name='usr' placeholder="Username" required><br>
     <input id='email' type='email' name='email' placeholder="Email" required><br>
     <input id='pswd1' type="password" name="pswd" placeholder="Password" required><br>
-    <input id='pswd2' type="password" name='pswd' placeholder="Confirm Password" required><br>
+    <input id='pswd2' type="password" name='pswd2' placeholder="Confirm Password" required><br>
     <button id='submit' type="submit" name="Submit">Submit Information</button>
     <div id='error'></div>
 </form>
