@@ -4,6 +4,7 @@ const usernew = require('./usernew');
 
 router.post('/post', (req, res) => {
     console.log(req.body)
+    console.log('hello world');
     //res.sendFile(__dirname + "/usernew.html")
     // res.json({
     //     Status: 'Successfully made an account!',
@@ -11,7 +12,7 @@ router.post('/post', (req, res) => {
     //     Email: data.email,
     //     Password: data.pswd
     // })
-    res.end();
+    res.send('Success');
 }) 
 //posting is for creating or updating a resource
 //this is why we need to use post to return the submitted information that the user submitted back to them

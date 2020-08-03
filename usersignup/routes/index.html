@@ -43,6 +43,7 @@
 </form>
 <script>
     if (document.getElementById('pswd1').value !== document.getElementById('pswd2').value) {
+        button.disabled = true;
         document.getElementById('error').textContent = 'Error: Passwords must match before submit.'
     }
     // const user = document.getElementsByName('usr').value
