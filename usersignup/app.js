@@ -7,10 +7,11 @@ let newuserpost = require('./routes/usernew')
 //declaring variables
 let app = express();
 let port = 3000;
+app.use(express.json()) 
 //app usage permissions
 app.use('/', homeRouter);
 app.use('/user', userpost);
-app.use(express.json()) //middleware that allows us to parse stringified objects
+//middleware that allows us to parse stringified objects
 //as a best practice don't trust what the client sends you
 
 

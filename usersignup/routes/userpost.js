@@ -4,7 +4,6 @@ const usernew = require('./usernew');
 
 router.post('/post', (req, res) => {
     console.log(req.body)
-    console.log('hello world');
     //res.sendFile(__dirname + "/usernew.html")
     // res.json({
     //     Status: 'Successfully made an account!',
