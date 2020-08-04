@@ -75,6 +75,8 @@ function submitReg() {
     const xhr = new XMLHttpRequest();
     xhr.open('POST', endpoint)
     xhr.onload = () => {
-        const data = xhr.responseText;
+        const res = JSON.parse(xhr.responseText)
+        console.log(res)
     }
+    xhr.send(JSON.stringify(reqBody))
 }

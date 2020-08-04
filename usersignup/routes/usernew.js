@@ -4,7 +4,7 @@ let router = express.Router();
 //THIS IS THE LAST ROUTE IN THE PATH
 router.post('/new', (req, res) => {
     console.log(req.body)
-    res.send('Success-This is the last route');
+    res.json(req.body);
 })
 
 
