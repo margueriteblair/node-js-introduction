@@ -32,16 +32,17 @@ userNameInput.name = 'username';
 userNameInput.id = 'username'
 submitButton.innerText = 'Submit';
 header.innerText = 'Register Today!';
+form.id = 'form';
 
 
 document.body.appendChild(header)
 document.body.appendChild(mainDiv);
 mainDiv.appendChild(form);
 mainDiv.appendChild(submitButton)
+form.appendChild(userNameInput)
 form.appendChild(emailInput)
 form.appendChild(passwordInput)
 form.appendChild(passwordConfirm)
-form.appendChild(userNameInput)
 
 let inputs = document.querySelectorAll('input');
 for (const input of inputs) {
