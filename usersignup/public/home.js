@@ -53,6 +53,10 @@ submitButton.addEventListener('mouseup', () => {
     for (const child of form.children) {
         console.log(child)
     }
+    for (const input of inputs) {
+        console.log(input.value)
+    }
+
     //console.log(form.children)
 })
 
