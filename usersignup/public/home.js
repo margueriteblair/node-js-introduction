@@ -49,6 +49,7 @@ for (const input of inputs) {
     input.classList.add('input');
 }
 
+
 submitButton.addEventListener('mouseup', () => {
     console.log('You submitted your information!')
     for (const child of form.children) {
@@ -57,9 +58,17 @@ submitButton.addEventListener('mouseup', () => {
     for (const input of inputs) {
         console.log(input.value)
     }
-
+submitButton.onclick = submitReg;
     //console.log(form.children)
 })
 
+}
 
+function submitReg() {
+    const formElem = document.getElementById('form');
+    const reqBody = {};
+    for (const input of formElem) {
+        reqBody[input.name] = input.value
+    }
+    console.log(reqBody)
 }
