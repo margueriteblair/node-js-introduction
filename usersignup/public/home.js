@@ -71,4 +71,10 @@ function submitReg() {
         reqBody[input.name] = input.value
     }
     console.log(reqBody)
+    const endpoint = location.origin + '/user/post/new';
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', endpoint)
+    xhr.onload = () => {
+        const data = xhr.responseText;
+    }
 }
