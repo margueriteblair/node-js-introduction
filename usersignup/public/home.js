@@ -78,6 +78,6 @@ function submitReg() {
         const res = JSON.parse(xhr.responseText)
         console.log(res)
     }
-    xhr.setRequestHeader({'Content-Type': 'application/json'})
+    xhr.setRequestHeader('Content-Type', 'application/json')
     xhr.send(JSON.stringify(reqBody))
 }
