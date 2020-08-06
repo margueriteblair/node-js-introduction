@@ -29,14 +29,20 @@ window.onload = () => {
 
     function logData() {
         console.log('Data was submitted')
-
+        let formElems = document.getElementById('form');
+        const enpoint = location.origin;
         const reqBody = {}; //setting an empty object for the request body
-        const xhr = new XMLHttpRequest();
-        xhr.open('PATCH', PATH)
-        xhr.onload = () => {
-            //log something
+        for (const input of formElems) {
+            reqBody[input.name] = input.name;
         }
-        xhr.send()
+        const xhr = new XMLHttpRequest();
+        xhr.open('PATCH', enpoint);
+        xhr.setRequestHeader('Content-Type', 'application/json')
+        xhr.onload = () => {
+            const response = JSON.parse(xhr.responseText);
+            console.log(response);
+        }
+        xhr.send(JSON.stringify(reqBody));
     }
 
 }
