@@ -9,7 +9,7 @@ let port = 3000;
 app.use(express.json())
 app.use(express.static('public'))
 app.use('/', home);
-app.use('user', userRouter)
+app.use('/user', userRouter)
 
 
 

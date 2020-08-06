@@ -33,15 +33,15 @@ window.onload = () => {
         const endpoint = location.origin + '/user/login';
         const reqBody = {}; //setting an empty object for the request body
         for (const input of formElems) {
-            reqBody[input.name] = input.name;
+            reqBody[input.name] = input.value;
         }
         const xhr = new XMLHttpRequest();
         xhr.open('PATCH', endpoint);
-        //xhr.setRequestHeader('Content-Type', 'application/json')
         xhr.onload = () => {
             const response = JSON.parse(xhr.responseText);
             console.log(response);
         }
+        xhr.setRequestHeader('Content-Type', 'application/json')
         xhr.send(JSON.stringify(reqBody));
     }
 
