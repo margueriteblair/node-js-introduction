@@ -27,22 +27,24 @@ window.onload = () => {
 
     signInButton.onclick = logData;
 
-    function logData() {
-        console.log('Data was submitted')
-        let formElems = document.getElementById('form');
-        const endpoint = location.origin + '/user/login';
-        const reqBody = {}; //setting an empty object for the request body
-        for (const input of formElems) {
-            reqBody[input.name] = input.value;
-        }
-        const xhr = new XMLHttpRequest();
-        xhr.open('PATCH', endpoint);
-        xhr.onload = () => {
-            const response = JSON.parse(xhr.responseText);
-            console.log(response);
-        }
-        xhr.setRequestHeader('Content-Type', 'application/json')
-        xhr.send(JSON.stringify(reqBody));
-    }
 
+}
+
+function logData() {
+    console.log('Data was submitted')
+    let formElems = document.getElementById('form');
+    const endpoint = location.origin + '/user/login';
+    const reqBody = {}; //setting an empty object for the request body
+    for (const input of formElems) {
+        reqBody[input.name] = input.value;
+    }
+    const xhr = new XMLHttpRequest();
+    xhr.open('PATCH', endpoint);
+    xhr.onload = () => {
+        const response = JSON.parse(xhr.responseText);
+        console.log(location.origin);
+        console.log(response);
+    }
+    xhr.setRequestHeader('Content-Type', 'application/json')
+    xhr.send(JSON.stringify(reqBody));
 }
