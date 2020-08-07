@@ -42,8 +42,9 @@ function logData() {
     xhr.open('PATCH', endpoint);
     xhr.onload = () => {
         const response = JSON.parse(xhr.responseText);
-        console.log(location.origin);
         console.log(response);
+        //xhr onload responds on the frontend
+        //the response text is the frontend response
     }
     xhr.setRequestHeader('Content-Type', 'application/json')
     xhr.send(JSON.stringify(reqBody));
