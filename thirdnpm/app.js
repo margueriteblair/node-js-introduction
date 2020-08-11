@@ -3,7 +3,7 @@
 let express = require('express');
 let app = express();
 //imported middleware and routers
-require('dotenv').config()
+require('dotenv').config() //you need to import it
 const firstMid = require('./middleware/firstmiddleware');
 const router = require('./routes/homerouter')
 const userrouter = require('./routes/userrouter')
