@@ -20,3 +20,4 @@ app.use('/user', userpost);
 app.listen(port, () => {
     console.log(`Server is listening to port ${port}`)
 })
+

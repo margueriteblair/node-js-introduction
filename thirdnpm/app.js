@@ -6,7 +6,7 @@ let app = express();
 const firstMid = require('./middleware/firstmiddleware');
 const router = require('./routes/homerouter')
 const userrouter = require('./routes/userrouter')
-const port = 3000;
+const port = process.env.port;
 
 app.use(express.json()); //parse the body from a stringified json to a javascript object 
 app.use(firstMid)
@@ -16,5 +16,5 @@ app.use('/user', userrouter);
 
 
 app.listen(port, function() {
-    console.log('success to listen to port 3000');
+    console.log('success to listen to port ' + port);
 });
