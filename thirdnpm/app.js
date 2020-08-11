@@ -3,10 +3,11 @@
 let express = require('express');
 let app = express();
 //imported middleware and routers
+require('dotenv').config()
 const firstMid = require('./middleware/firstmiddleware');
 const router = require('./routes/homerouter')
 const userrouter = require('./routes/userrouter')
-const port = process.env.port;
+const port = process.env.PORT || 3000;
 
 app.use(express.json()); //parse the body from a stringified json to a javascript object 
 app.use(firstMid)

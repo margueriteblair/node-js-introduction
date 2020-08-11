@@ -3,7 +3,14 @@ const express = require('express');
 
 router = express.Router();
 router.get('/', (req, res) => {
-    res.send('You are on the homepage');
+    const myObj = {
+        message: 'Hello World, welcome to Chilis'
+    }
+
+    if (process.env.MESSAGE_STYLE === "uppercase") {
+        myObj.message = myObj.message.toUpperCase();
+    }
+    res.json(myObj);
 })
 
 
